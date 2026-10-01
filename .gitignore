@@ -1,0 +1,38 @@
+# Solana Music Tokens
+
+A simple Web3 app that displays up to 10 music-category tokens on the Solana blockchain.
+
+## Features
+
+- Up to 10 curated music-themed token cards
+- Solana network UI styling
+- Category filter chips
+- Phantom wallet connection support
+- Quick token market overview with price, supply, holders, and volume
+
+## Run locally
+
+1. Open `index.html` in a browser, or
+2. Serve the folder with a simple local web server:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then visit:
+
+```text
+http://localhost:8000
+```
+
+## Notes
+
+- This app is intentionally simple and front-end focused.
+- The token list is a curated demo set for the Music category on Solana.
+- Wallet support requires the Phantom browser extension.
+
+## Project structure
+
+- `index.html` — App shell and page layout
+- `styles.css` — App styling and dark theme design
+- `app.js` — Token data rendering and wallet logic

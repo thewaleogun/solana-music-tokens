@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solana Music Tokens</title>
+    <meta
+      name="description"
+      content="Simple Web3 app showing up to 10 music-themed tokens on the Solana blockchain."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">S</div>
+          <div>
+            <p class="eyebrow">Solana Explorer</p>
+            <h1>Music Tokens</h1>
+          </div>
+        </div>
+
+        <button id="walletButton" class="wallet-btn">
+          Connect Wallet
+        </button>
+      </header>
+
+      <main class="main-panel">
+        <section class="hero">
+          <div>
+            <span class="pill">Solana • Music Category</span>
+            <h2>Discover the top 10 music tokens on Solana</h2>
+            <p>
+              Explore a curated list of music-focused assets in the Solana ecosystem.
+              Built for quick discovery, market snapshot view, and wallet integration.
+            </p>
+          </div>
+
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <span class="metric-label">Visible Tokens</span>
+              <strong id="tokenCount">0</strong>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Category</span>
+              <strong>Music</strong>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Network</span>
+              <strong>Solana</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="toolbar">
+          <div class="filter-group" aria-label="Token filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="music">Music</button>
+            <button class="filter-btn" data-filter="trending">Trending</button>
+            <button class="filter-btn" data-filter="new">New</button>
+          </div>
+
+          <div class="status-box">
+            <span class="status-dot"></span>
+            <span id="walletStatus">Wallet not connected</span>
+          </div>
+        </section>
+
+        <section class="token-grid" id="tokenGrid" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <script src="https://unpkg.com/@solana/web3.js@1.95.0/lib/index.iife.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
